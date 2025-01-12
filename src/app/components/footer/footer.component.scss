@@ -46,7 +46,7 @@ footer {
   p {
     margin-top: 25px;
     font-size: 0.875rem;
-    color: #3D3C3C;
+    color: var(--footer-sub-text);
   }
   ul {
     list-style: none;
@@ -54,14 +54,14 @@ footer {
     padding: 0;
     margin: 0 20px 0 30px;
     li {
-      border-bottom: 1px solid #BFBFBF;
+      border-bottom: 1px solid var(--footer-nav-border);
       padding: 12px 0;
       &:last-child {
         border-bottom: none;
       }
       a {
         font-size: 1.375rem;
-        color: #000;
+        color: var(--text-color);
         text-decoration: none;
       }
     }
@@ -72,7 +72,7 @@ footer {
 }
 
 .work-card {
-  border: 1.2px solid #000;
+  border: 1.2px solid var(--card-border);
   border-radius: 30px;
   background: var(--primary-color);
   padding: 13px;
@@ -110,16 +110,16 @@ footer {
   display: flex;
   margin-top: 20px;
   .icon-button {
-    background: #000;
+    background: var(--footer-icon-button-background);
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 140px;
     min-height: 140px;
-    border: none;
     flex-grow: 1;
     margin-right: 20px;
+    border: 1px solid var(--footer-icon-button-border);
     &:last-child {
       margin-right: 0;
     }
@@ -129,7 +129,7 @@ footer {
 
 .sub-footer {
   width: 100%;
-  border-top: 1px solid #CECECE;
+  border-top: 1px solid var(--footer-sub-border);
   padding: 24px 0;
   display: flex;
   justify-content: space-between;
@@ -139,7 +139,7 @@ footer {
     a {
       font-size: 1rem;
       text-decoration: none;
-      color: #000;
+      color: var(--text-color);
       padding: 10px 23px;
     }
   }

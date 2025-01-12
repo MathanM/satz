@@ -2,7 +2,7 @@
   <div class="main-footer">
     <div class="footer-card">
       <div class="footer-card-left">
-        <img src="app-logo.svg"  alt="logo" />
+        <img [src]="appService.isDarkTheme ? 'app-logo-dark.svg' : 'app-logo.svg'"  alt="logo" />
         <p>I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions.</p>
       </div>
       <div class="footer-card-right">

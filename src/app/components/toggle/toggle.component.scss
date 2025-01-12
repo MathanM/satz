@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  height: 16px;
+  width: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 8px;
+  input {
+    display: none;
+    &:checked + .slider {
+      background-color: var(--toggle-color);
+    }
+    &:checked + .slider::after {
+      transform: translateY(-50%) translateX(12px);
+    }
+  }
+  .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-color);
+    border-radius: 8px;
+    transition: 0.2s;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      background-color: var(--card-background);
+      transition: 0.2s;
+      border: 1px solid var(--toggle-color);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-5px);
+    }
+  }
+}
