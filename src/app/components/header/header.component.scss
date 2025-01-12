@@ -1,0 +1,41 @@
+:host {
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  max-width: var(--max-page-width);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  border: 1.2px solid var(--card-border);
+  border-radius: 22px;
+  min-height: 71px;
+  align-items: center;
+  padding: 12px 16.5px;
+  box-shadow: 0 5px 14px 0 #0000001C;
+  background: var(--card-background);
+}
+
+.nav-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+nav {
+  a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--button-color);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    &:hover, &.active {
+      border-color: var(--button-border);
+    }
+  }
+}

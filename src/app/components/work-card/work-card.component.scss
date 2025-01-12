@@ -1,0 +1,61 @@
+:host {
+  display: flex;
+  width: 100%;
+  .work-card {
+    flex-shrink: 1;
+    max-width: 500px;
+  }
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    .work-card {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+  }
+}
+.work-card {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px dashed var(--card-border);
+    padding-top: 20px;
+    flex-grow: 1;
+    min-height: 100px;
+  }
+}
+
+.work-card-img {
+  border: 1px solid var(--card-border);
+  border-radius: 30px;
+  background: var(--card-background);
+  padding: 14px;
+  flex-grow: 1;
+  display: flex;
+  img {
+    border-radius: 30px;
+    width: 100%;
+  }
+}
+
+.badge-group {
+  app-badge {
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

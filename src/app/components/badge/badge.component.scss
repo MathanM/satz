@@ -1,0 +1,14 @@
+:host {
+  background: var(--badge-background);
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 1.125rem;
+  display: inline-block;
+  color: var(--badge-color);
+}
+
+:host([size="s"]) {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  border-radius: 8px;
+}

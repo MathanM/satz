@@ -1,0 +1,68 @@
+.home-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-banner {
+  display: flex;
+  width: 100%;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  .home-banner-img {
+    margin-left: 20px;
+    border-radius: 30px;
+    border: 1px solid var(--card-border);
+    overflow: hidden;
+    background: var(--primary-color);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.home-card {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 70px 35px;
+  flex-grow: 1;
+  h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 55px;
+    line-height: 1;
+    span {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.batch-card {
+  border-radius: 24px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 30px 45px;
+  margin-top: 20px;
+  app-badge {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.work-cards {
+  display: flex;
+  width: 100%;
+  padding: 20px 40px;
+  flex-direction: column;
+  margin-bottom: 60px;
+  app-work-card {
+    margin-bottom: 80px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
