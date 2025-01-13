@@ -1,7 +1,7 @@
 <header>
   <div class="left-container">
     <img height="36" [src]="appService.isDarkTheme ? 'app-logo-dark.svg' :'app-logo.svg'" alt="logo"/>
-    <app-toggle [(selected)]="isDarkTheme" (selectedChange)="onTheme($event)"></app-toggle>
+    <app-toggle [selected]="appService.isDarkTheme" (selectedChange)="onTheme($event)"></app-toggle>
   </div>
   <div class="nav-container">
     <nav>

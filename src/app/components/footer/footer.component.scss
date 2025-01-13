@@ -69,6 +69,19 @@ footer {
   .footer-card-left {
     max-width: 250px;
   }
+  @media (max-width: 680px) {
+    flex-wrap: wrap;
+    .footer-card-left {
+      max-width: 100%;
+    }
+    .footer-card-right {
+      width: 100%;
+      margin-top: 30px;
+    }
+    ul {
+      margin: 0;
+    }
+  }
 }
 
 .work-card {

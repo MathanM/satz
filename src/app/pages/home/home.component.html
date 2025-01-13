@@ -7,17 +7,24 @@
         <app-button inverse="true" filled="true" label="Let’s talk" iconRight="talk"></app-button>
       </div>
       <div class="batch-card">
-        <app-badge label="Branding"></app-badge>
-        <app-badge label="Logo"></app-badge>
+        <swiper-container slides-per-view="auto" space-between="20" free-mode="true" loop="true" speed="300" autoplay="true">
+          <swiper-slide><app-badge label="UI/UX"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Branding"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Logo"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Illustration"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Typography"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Design system"></app-badge></swiper-slide>
+          <swiper-slide><app-badge label="Branding kit"></app-badge></swiper-slide>
+        </swiper-container>
       </div>
     </div>
     <div class="home-banner-img">
-      <img src="banner.jpeg"  alt="" />
+      <img src="banner.png"  alt="Satheesh M" />
     </div>
   </section>
   <section class="work-cards">
-    <app-work-card title="Power House GYM" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="work-bg.png"></app-work-card>
-    <app-work-card title="Power House GYM" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="work-bg.png"></app-work-card>
-    <app-work-card title="Power House GYM" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="work-bg.png"></app-work-card>
+    <app-work-card title="Power House GYM" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="gym-bento.png"></app-work-card>
+    <app-work-card title="Boo-sync" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="boosync.png"></app-work-card>
+    <app-work-card title="Power House GYM" description="I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions." [labels]="['Logo', 'Brand']" image="gym-bento.png"></app-work-card>
   </section>
 </div>
