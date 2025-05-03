@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+a {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.icon {
+  width: 6px;
+  margin: 6px 12px;
+}

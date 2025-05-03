@@ -1,0 +1,33 @@
+.brand-card {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.brand-content {
+  width: 50%;
+  padding: 40px;
+}
+.brand-logo {
+  border-radius: 27px;
+  border: 1px solid var(--card-border);
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--brand-logo-background, #FFE800);
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  span {
+    color: var(--primary-color);
+  }
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

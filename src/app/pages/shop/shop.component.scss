@@ -1,0 +1,40 @@
+.shop-intro {
+  display: flex;
+  width: 100%;
+  padding: 20px var(--page-inline-padding);
+  gap: 20px;
+}
+
+.shop-header {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 45px;
+  flex-grow: 1;
+  p {
+    margin-bottom: 6px;
+  }
+}
+
+.shop-logo {
+  width: 40%;
+  background: url('/s-logo.png');
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4.125rem;
+  margin-bottom: 10px;
+  span {
+    color: var(--primary-color);
+  }
+}
+
+.shop-items {
+  display: flex;
+  gap: 20px;
+  padding: 20px var(--page-inline-padding);
+  margin: 50px 0;
+}

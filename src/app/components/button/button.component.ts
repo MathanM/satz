@@ -1,4 +1,4 @@
-import {booleanAttribute, Component, Input} from '@angular/core';
+import {booleanAttribute, Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgIf} from '@angular/common';
 
 @Component({
@@ -14,4 +14,9 @@ export class ButtonComponent {
   @Input() iconRight: string | undefined;
   @Input({transform: booleanAttribute}) inverse: boolean = false;
   @Input({transform: booleanAttribute}) filled: boolean = false;
+  @Output() onButtonClick = new EventEmitter();
+
+  onClick() {
+    this.onButtonClick.emit();
+  }
 }

@@ -1,0 +1,36 @@
+.about-intro {
+  display: flex;
+  width: 100%;
+  padding: 20px var(--page-inline-padding);
+}
+.about-container {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 45px;
+  display: flex;
+}
+.about-content {
+  padding-right: 30px;
+  width: 48%;
+}
+.about-img {
+  width: 52%;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  span {
+    color: var(--primary-color);
+  }
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 8px;
+}
+app-button {
+  margin-top: 30px;
+  display: block;
+}

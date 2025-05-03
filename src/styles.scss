@@ -18,7 +18,8 @@
   --badge-color: #000;
   --primary-color: #FF0000;
   --page-color: #F2F2F2;
-  --max-page-width: 1440px;
+  --page-max-width: 1440px;
+  --page-inline-padding: 40px;
   --text-color: #000;
   --footer-sub-text: #3D3C3C;
   --footer-nav-border: #BFBFBF;
@@ -26,6 +27,9 @@
   --footer-icon-button-border: #000;
   --footer-icon-button-background: #000;
   --toggle-color: #000;
+  @media (max-width: 500px) {
+    --page-inline-padding: 15px;
+  }
 }
 body.dark {
   --card-background: #000;
@@ -40,7 +44,6 @@ body.dark {
   --badge-color: #fff;
   --primary-color: #FF0000;
   --page-color: #1A1A1A;
-  --max-page-width: 1440px;
   --text-color: #fff;
   --footer-sub-text: #C4C4C4;
   --footer-nav-border: #505050;
@@ -55,12 +58,19 @@ body.dark {
   font-family: 'outfit', sans-serif;
 }
 
+html {
+  font-size: 16px;
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+}
+
 body {
   margin: 0;
   background: var(--page-color);
 }
 
-p, h4, h2, h3 {
+p, h4, h2, h3, h1 {
   margin: 0;
   color: var(--text-color);
 }
@@ -71,7 +81,7 @@ p, h4, h2, h3 {
 }
 
 .page-container {
-  max-width: var(--max-page-width);
+  max-width: var(--page-max-width);
   width: 100%;
   margin: 112px auto 0;
 }

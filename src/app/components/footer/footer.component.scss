@@ -1,8 +1,8 @@
 :host {
-  padding: 20px 40px 0;
+  padding: 20px var(--page-inline-padding) 0;
   width: 100%;
   display: flex;
-  max-width: var(--max-page-width);
+  max-width: var(--page-max-width);
   margin: 0 auto;
 }
 
@@ -82,6 +82,13 @@ footer {
       margin: 0;
     }
   }
+  @media (max-width: 500px) {
+    padding: 30px;
+    border-radius: 26px;
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 .work-card {
@@ -117,6 +124,18 @@ footer {
   @media (max-width: 1024px) {
     min-height: 130px;
   }
+  @media (max-width: 680px) {
+    .icon-container {
+      min-width: 110px;
+    }
+  }
+  @media (max-width: 500px) {
+    border-radius: 26px;
+    .icon-container {
+      min-width: 90px;
+      border-radius: 26px;
+    }
+  }
 }
 
 .icon-button-group {
@@ -135,6 +154,16 @@ footer {
     border: 1px solid var(--footer-icon-button-border);
     &:last-child {
       margin-right: 0;
+    }
+    @media (max-width: 680px) {
+      min-width: auto;
+    }
+    @media (max-width: 500px) {
+      margin-right: 16px;
+      min-height: 120px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

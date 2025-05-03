@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.brand-content {
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  padding: 40px;
+  margin-right: 20px;
+  flex-grow: 1;
+}
+
+.brand-content-description {
+  border: 1px solid var(--card-border);
+  border-radius: 30px;
+  background: var(--card-background);
+  padding: 40px;
+  width: 65%;
+}
+h4 {
+  font-size: 2.125rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.badge-group {
+  app-badge {
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

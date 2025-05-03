@@ -1,4 +1,4 @@
-<button [class.inverse]="inverse" [class.filled]="filled">
+<button [class.inverse]="inverse" [class.filled]="filled" (click)="onClick()">
   {{label}}
   <img *ngIf="iconRight" class="icon-right" src="icons/{{iconRight}}.svg" alt="icon-right" />
 </button>

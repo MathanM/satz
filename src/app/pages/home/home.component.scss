@@ -11,7 +11,7 @@
 .home-banner {
   display: flex;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px var(--page-inline-padding);
   margin-bottom: 60px;
   .home-banner-img {
     margin-left: 20px;
@@ -35,6 +35,15 @@
       width: 100%;
     }
   }
+  @media (max-width: 680px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+    .home-banner-img {
+      border-radius: 26px;
+    }
+  }
 }
 
 .home-card {
@@ -49,8 +58,16 @@
     margin-top: 15px;
     margin-bottom: 55px;
     line-height: 1;
+    letter-spacing: -0.5px;
     span {
       color: var(--primary-color);
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 40px 30px;
+    border-radius: 26px;
+    h2 {
+      font-size: 3.5rem;
     }
   }
 }
@@ -61,6 +78,23 @@
   background: var(--card-background);
   padding: 30px 45px;
   margin-top: 20px;
+  position: relative;
+  &:before, &:after {
+    content: "";
+    width: 65px;
+    height: 80px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--card-background) 100%);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+  }
+  &:after{
+    transform: translateY(-50%) scale(-1);
+    left: auto;
+    right: 45px;
+  }
   swiper-container {
     width: 100%;
   }
@@ -73,18 +107,45 @@
       margin-right: 0;
     }
   }
+  @media (max-width: 500px) {
+    padding: 20px;
+    &:before {
+      left: 20px;
+    }
+    &:after {
+      right: 20px;
+    }
+  }
 }
 
 .work-cards {
   display: flex;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px var(--page-inline-padding);
   flex-direction: column;
   margin-bottom: 60px;
   app-work-card {
     margin-bottom: 80px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  @media (max-width: 680px) {
+    margin-bottom: 40px;
+    app-work-card {
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+    app-work-card {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -1,0 +1,4 @@
+<ng-container *ngFor="let link of links; let i = index">
+  <a href="#">{{link.label}}</a>
+  <img *ngIf="i !== links.length - 1" class="icon" src="icons/{{appService.isDarkTheme ? 'breadcrumb-dark' : 'breadcrumb'}}.svg" alt="arrow" />
+</ng-container>
