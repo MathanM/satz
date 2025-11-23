@@ -19,8 +19,9 @@ export class WorkCardComponent {
   @Input({required: true}) description!: string;
   @Input({required: true}) image!: string;
   @Input({required: true}) labels!: string[];
+  @Input({required: true}) id!: string;
   constructor(private router: Router) {}
   onViewWork() {
-    this.router.navigate(['/work']);
+    this.router.navigate(['/work', this.id]);
   }
 }

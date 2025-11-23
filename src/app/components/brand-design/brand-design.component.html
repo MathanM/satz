@@ -1,0 +1,21 @@
+<div class="sz-card design-hero" [style.background-color]="backgroundColor">
+  <img [src]="designHero" alt="Design hero" />
+</div>
+<div class="design-specs">
+  <div class="sz-card spec-panel" [style.background-color]="backgroundColor">
+    <h4>Typography</h4>
+    <p class="typography-font">{{typographyFont}}</p>
+  </div>
+  <div class="sz-card spec-panel colors-panel" [style.background-color]="backgroundColor">
+    <h4>Color</h4>
+    <div class="color-swatches">
+      <div
+        *ngFor="let color of colorSwatch"
+        class="color-swatch"
+        [style.background-color]="color">
+        {{color}}
+      </div>
+    </div>
+  </div>
+</div>
+

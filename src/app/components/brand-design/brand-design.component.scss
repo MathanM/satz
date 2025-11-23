@@ -1,0 +1,87 @@
+:host {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.design-hero {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.design-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.spec-panel {
+  padding: 20px 35px;
+  border-radius: 26px;
+  &.colors-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--card-border);
+    line-height: 40px;
+  }
+}
+
+.typography-font {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 40px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.color-swatches {
+  display: flex;
+  flex-direction: row;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -5px;
+  margin-top: 25px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.color-swatch {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  flex-grow: 1;
+  font-size: clamp(0.875rem, 1cqw, 1.5rem);
+  font-weight: 900;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .brand-design {
+    flex-direction: column;
+  }
+
+  .design-specs {
+    width: 100%;
+  }
+}
+

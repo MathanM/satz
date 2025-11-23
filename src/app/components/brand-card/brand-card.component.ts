@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {BreadcrumbsComponent} from '../breadcrumbs/breadcrumbs.component';
 
 @Component({
@@ -10,9 +11,15 @@ import {BreadcrumbsComponent} from '../breadcrumbs/breadcrumbs.component';
   styleUrl: './brand-card.component.scss'
 })
 export class BrandCardComponent {
-  links = [
-    { label: 'Home', path: ''},
-    { label: 'Work', path: ''},
-    { label: 'Power House GYM', path: ''},
-  ]
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input() logo: string = '';
+  @Input() primaryBackgroundColor: string = '';
+  @Input() links: { label: string, path: string }[] = [];
+
+  constructor(private sanitizer: DomSanitizer) {}
+
+  get safeTitle(): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(this.title);
+  }
 }

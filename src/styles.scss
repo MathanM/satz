@@ -6,6 +6,7 @@
 }
 
 :root {
+  --card-border-radius: 30px;
   --card-background: #fff;
   --card-border: #000;
   --button-background: #fff;
@@ -84,4 +85,10 @@ p, h4, h2, h3, h1 {
   max-width: var(--page-max-width);
   width: 100%;
   margin: 112px auto 0;
+}
+
+.sz-card {
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
 }
