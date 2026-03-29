@@ -50,6 +50,11 @@
   margin-bottom: 20px;
 }
 
+.typography-image {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
 .color-swatches {
   display: flex;
   flex-direction: row;
@@ -85,3 +90,10 @@
   }
 }
 
+#ezhumin {
+  &.design-hero {
+    padding: 70px;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+}

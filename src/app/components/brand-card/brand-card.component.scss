@@ -23,6 +23,8 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
   span {
     color: var(--primary-color);
   }

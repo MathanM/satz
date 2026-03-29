@@ -11,7 +11,7 @@
     </nav>
   </div>
   <div class="right-container">
-    <app-button label="Let’s talk" [iconRight]="appService.isDarkTheme ? 'talk-dark' : 'talk'"></app-button>
+    <app-button label="Let’s talk" [iconRight]="appService.isDarkTheme ? 'talk-dark' : 'talk'" (onButtonClick)="onMail()"></app-button>
     <div class="ham-menu" (click)="onToggleMenu()">
       <div class="ham-line"></div>
       <div class="ham-line"></div>

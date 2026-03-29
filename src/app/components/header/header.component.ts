@@ -32,4 +32,8 @@ export class HeaderComponent {
   onToggleMenu() {
     this.showMenu = !this.showMenu;
   }
+
+  onMail() {
+    window.location.href = 'mailto:satzartz@gmail.com';
+  }
 }

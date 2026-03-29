@@ -6,7 +6,7 @@ export const workDetailInfo: Record<string, {
   logo: string;
   primaryBackgroundColor: string;
   banner1: string;
-  banner2: string;
+  banner2?: string;
   labels: string[];
   images: Array<{
     src: string;
@@ -17,8 +17,11 @@ export const workDetailInfo: Record<string, {
   goals: string;
   results: string[];
   designHero: string;
-  typographyFont: string;
+  typographyFont?: string;
   colorSwatch: string[];
+  colorBackgroundColor?: string;
+  typographyBackgroundColor?: string;
+  typoImage?: string;
 }> = {
   gym: {
     id: "gym",
@@ -153,6 +156,83 @@ export const workDetailInfo: Record<string, {
     designHero: "boosync/design-hero.png",
     typographyFont: "MODERNIZ-REGULAR",
     colorSwatch: ["#FFD251", "#2DBA88", "#EFE6D4", "#FF90CB"]
+  },
+  ezhumin: {
+    id: "ezhumin",
+    title: "Ezhumin",
+    titleHtml: "<span style='color: #000000;'>Ezhumin</span><img src='/ezhumin/badge.svg' style='height: 60px; margin-left: 30px;' alt='Ezhumin badge'/>",
+    description: "EzhuMin (எழுமின்) is a Tamil-led identity for the state’s EV revolution, uniting culture, language, and clean energy. Awarded 1st Runner-Up in the Tamil Nadu Government EV Branding Competition. A bold, future-focused system for sustainable mobility.",
+    logo: "ezhumin/logo.svg",
+    primaryBackgroundColor: "#FFE800",
+    banner1: "ezhumin/banner-1.png",
+    labels: ['Branding', 'Logo'],
+    typoImage: "ezhumin/typo.png",
+    images: [
+      {
+        src: "ezhumin/tile-1.png",
+        styles: {
+          "background-color": "#08D308",
+          "background-image": "url('/ezhumin/tile-1.png')",
+          "background-size": "auto 77%",
+          "background-position": "44% center",
+          "background-repeat": "no-repeat",
+          "width": "35%",
+          "height": "650px"
+        }
+      },
+      {
+        src: "ezhumin/tile-2.png",
+        styles: {
+          "background-color": "#08D308",
+          "background-image": "url('/ezhumin/tile-2.png')",
+          "background-size": "73%",
+          "background-position": "center",
+          "background-repeat": "no-repeat",
+          "width": "65%",
+          "height": "650px"
+        }
+      },
+      {
+        src: "ezhumin/tile-3.png",
+        styles: {
+          "background-color": "#08D308",
+          "background-image": "url('/ezhumin/tile-3.png')",
+          "background-size": "cover",
+          "background-position": "center",
+          "background-repeat": "no-repeat",
+          "width": "52%",
+          "height": "490px"
+        }
+      },
+      {
+        src: "ezhumin/tile-4.png",
+        styles: {
+          "background-color": "#08D308",
+          "background-image": "url('/ezhumin/tile-4.png')",
+          "background-size": "75%",
+          "background-position": "center",
+          "background-repeat": "no-repeat",
+          "width": "48%",
+          "height": "490px"
+        }
+      }
+    ],
+    links: [
+      { label: 'Home', path: '/home'},
+      { label: 'Work', path: '/home'},
+      { label: 'Ezhumin', path: ''},
+    ],
+    industry: "Energy / Sustainability / Power Solutions",
+    goals: "The goal of this project was to create a brand identity that feels authentically Tamil while clearly communicating electric mobility and clean energy. The system needed to work across public infrastructure and mass communication platforms, balancing government authority with a modern, tech-forward sense of optimism. A key objective was to make the brand instantly understandable to the public through bold visual forms, minimal illustration, and strong symbolism that could be recognized quickly in busy urban environments.",
+    results: [
+      "The final outcome is “எழுமின் (EzhuMin)”, a brand identity that brings together language, culture, and technology into a cohesive visual system. The name, derived from எழு (rise) and மின் (electricity), reinforces the idea of progress powered by energy. A bold Tamil logotype with an integrated lightning stroke was developed to symbolize motion, transformation, and forward momentum.",
+      "The colour palette was designed to be flexible and effective across both digital and physical environments. Through mockups on EV charging stations, hoardings, vehicles, and social media, the system demonstrates strong real-world adaptability. The project showcases how regional language–led branding can be modern, scalable, and impactful, especially for public and government-focused initiatives."
+    ],
+    designHero: "ezhumin/design-hero.png",
+    colorSwatch: ["#FEEC24", "#08D308", "#47CAFF"],
+    colorBackgroundColor: "#08D308",
+    typographyBackgroundColor: "#08D308"
+
   },
   majesty: {
     id: "majesty",

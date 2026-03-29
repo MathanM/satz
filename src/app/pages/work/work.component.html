@@ -15,12 +15,16 @@
       [results]="workDetail.results">
     </app-brand-content>
     <app-brand-design
+      [id]="workDetail.id"
+      [typoImage]="workDetail.typoImage"
       [designHero]="workDetail.designHero"
       [typographyFont]="workDetail.typographyFont"
       [colorSwatch]="workDetail.colorSwatch"
+      [colorBackgroundColor]="workDetail.colorBackgroundColor"
+      [typographyBackgroundColor]="workDetail.typographyBackgroundColor"
       [backgroundColor]="workDetail.primaryBackgroundColor">
     </app-brand-design>
-    <img class="sz-card" [src]="workDetail.banner2" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
+    <img class="sz-card" *ngIf="workDetail.banner2" [src]="workDetail.banner2" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
     <div *ngIf="workDetail.images.length > 0">
       <div *ngFor="let r of rows" class="images-row">
         <div *ngFor="let c of r"

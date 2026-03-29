@@ -1,12 +1,13 @@
-<div class="sz-card design-hero" [style.background-color]="backgroundColor">
+<div [id]="id" class="sz-card design-hero" [style.background-color]="backgroundColor">
   <img [src]="designHero" alt="Design hero" />
 </div>
 <div class="design-specs">
-  <div class="sz-card spec-panel" [style.background-color]="backgroundColor">
+  <div class="sz-card spec-panel" [style.background-color]="typographyBackgroundColor ?? backgroundColor">
     <h4>Typography</h4>
-    <p class="typography-font">{{typographyFont}}</p>
+    <p *ngIf="typographyFont" class="typography-font">{{typographyFont}}</p>
+    <img *ngIf="typoImage" [src]="typoImage" alt="Typography image" class="typography-image"/>
   </div>
-  <div class="sz-card spec-panel colors-panel" [style.background-color]="backgroundColor">
+  <div class="sz-card spec-panel colors-panel" [style.background-color]="colorBackgroundColor ?? backgroundColor">
     <h4>Color</h4>
     <div class="color-swatches">
       <div

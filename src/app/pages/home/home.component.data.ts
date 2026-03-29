@@ -19,5 +19,13 @@ export const homeWorkInfo = [
     labels: ['Branding', 'Logo'],
     image: "your-majesty.png",
     id: "majesty"
+  },
+  {
+    title: "Ezhumin",
+    description: "Designed as a brand identity proposal for a Tamil Nadu government EV initiative. The project was awarded 1st Runner-Up in the official branding competition.",
+    labels: ['Branding', 'Logo'],
+    image: "your-majesty.png",
+    id: "ezhumin",
+    badge: "ezhumin/badge.svg"
   }
 ];
