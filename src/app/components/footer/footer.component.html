@@ -10,7 +10,7 @@
           <li><a routerLink="/home">Work</a></li>
           <li><a routerLink="/about">About me</a></li>
           <li><a routerLink="/shop">Shop</a></li>
-          <li><a routerLink="/about">Contact me</a></li>
+          <li><a href="mailto:satzartz@gmail.com">Contact me</a></li>
         </ul>
       </div>
     </div>
@@ -25,13 +25,13 @@
         </div>
       </div>
       <div class="icon-button-group">
-        <button class="icon-button">
+        <button class="icon-button" (click)="onLink('insta')">
           <img src="icons/insta.svg" alt="instagram" />
         </button>
-        <button class="icon-button">
+        <button class="icon-button" (click)="onLink('twitter')">
           <img src="icons/twitter.svg" alt="twitter" />
         </button>
-        <button class="icon-button">
+        <button class="icon-button" (click)="onLink('mail')">
           <img src="icons/email.svg" alt="email" />
         </button>
       </div>

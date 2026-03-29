@@ -1,10 +1,11 @@
 export const homeWorkInfo = [
   {
-    title: "Power House GYM",
-    description: "Created a bold brand identity with a dynamic logo for Power House GYM with vibrant colors, and motivational designs to inspire strength and energy.",
+    title: "Ezhumin",
+    description: "Designed as a brand identity proposal for a Tamil Nadu government EV initiative. The project was awarded 1st Runner-Up in the official branding competition.",
     labels: ['Branding', 'Logo'],
-    image: "gym-bento.png",
-    id: "gym"
+    image: "your-majesty.png",
+    id: "ezhumin",
+    badge: "ezhumin/badge.svg"
   },
   {
     title: "Boo-sync",
@@ -21,11 +22,10 @@ export const homeWorkInfo = [
     id: "majesty"
   },
   {
-    title: "Ezhumin",
-    description: "Designed as a brand identity proposal for a Tamil Nadu government EV initiative. The project was awarded 1st Runner-Up in the official branding competition.",
+    title: "Power House GYM",
+    description: "Created a bold brand identity with a dynamic logo for Power House GYM with vibrant colors, and motivational designs to inspire strength and energy.",
     labels: ['Branding', 'Logo'],
-    image: "your-majesty.png",
-    id: "ezhumin",
-    badge: "ezhumin/badge.svg"
+    image: "gym-bento.png",
+    id: "gym"
   }
 ];
