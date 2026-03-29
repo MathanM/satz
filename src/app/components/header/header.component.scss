@@ -69,7 +69,11 @@ header {
     justify-content: flex-end;
     @media (max-width: 680px) {
       flex-grow: 1;
+      app-button {
+        display: none;
+      }
     }
+    
   }
   @media (max-width: 500px) {
     border-radius: 18px;
@@ -102,5 +106,12 @@ header {
     &:last-child {
       border-bottom: none;
     }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  app-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
