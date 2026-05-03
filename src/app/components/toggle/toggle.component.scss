@@ -9,6 +9,7 @@
   display: inline-block;
   position: relative;
   border-radius: 8px;
+  cursor: pointer;
   input {
     display: none;
     &:checked + .slider {
@@ -26,14 +27,14 @@
     bottom: 0;
     background-color: var(--toggle-color);
     border-radius: 8px;
-    transition: 0.2s;
+    :host(.ready) & { transition: 0.2s; }
     &::after {
       position: absolute;
       content: '';
       height: 20px;
       width: 20px;
       background-color: var(--card-background);
-      transition: 0.2s;
+      :host(.ready) & { transition: 0.2s; }
       border: 1px solid var(--toggle-color);
       border-radius: 50%;
       top: 50%;

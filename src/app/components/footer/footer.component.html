@@ -2,7 +2,7 @@
   <div class="main-footer">
     <div class="footer-card">
       <div class="footer-card-left">
-        <img [src]="appService.isDarkTheme ? 'app-logo-dark.svg' : 'app-logo.svg'"  alt="logo" />
+        <a routerLink="/home"><img [src]="appService.isDarkTheme ? 'app-logo-dark.svg' : 'app-logo.svg'" alt="logo" /></a>
         <p>I’m a Graphic Designer, with over 6 years of industry experience, delivering effective brand and web design solutions.</p>
       </div>
       <div class="footer-card-right">
@@ -17,7 +17,19 @@
     <div class="footer-container-right">
       <div class="work-card">
         <div class="icon-container">
-          <img src="icons/globe.svg" alt="globe"/>
+          <svg class="globe-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="globeClip">
+                <circle cx="16" cy="16" r="13"/>
+              </clipPath>
+            </defs>
+            <circle cx="16" cy="16" r="14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="2" y1="16" x2="30" y2="16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <g clip-path="url(#globeClip)">
+              <ellipse class="meridian m1" cx="16" cy="16" rx="5.6" ry="13" stroke="white" fill="none" stroke-width="3" vector-effect="non-scaling-stroke"/>
+              <ellipse class="meridian m2" cx="16" cy="16" rx="5.6" ry="13" stroke="white" fill="none" stroke-width="3" vector-effect="non-scaling-stroke"/>
+            </g>
+          </svg>
         </div>
         <div class="work-content">
           <h4>Globally Available for Work</h4>

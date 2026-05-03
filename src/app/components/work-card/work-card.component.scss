@@ -1,6 +1,16 @@
 :host {
   display: flex;
   width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .work-card {
     flex-shrink: 1;
     max-width: 500px;

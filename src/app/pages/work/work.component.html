@@ -1,20 +1,20 @@
 <div class="page-container">
   <section class="work-section" *ngIf="workDetail">
-    <app-brand-card
+    <app-brand-card class="scroll-section"
       [title]="workDetail.titleHtml"
       [description]="workDetail.description"
       [logo]="workDetail.logo"
       [primaryBackgroundColor]="workDetail.primaryBackgroundColor"
       [links]="workDetail.links">
     </app-brand-card>
-    <img class="sz-card" [src]="workDetail.banner1" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
-    <app-brand-content
+    <img class="sz-card scroll-section" [src]="workDetail.banner1" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
+    <app-brand-content class="scroll-section"
       [labels]="workDetail.labels"
       [industry]="workDetail.industry"
       [goals]="workDetail.goals"
       [results]="workDetail.results">
     </app-brand-content>
-    <app-brand-design
+    <app-brand-design class="scroll-section"
       [id]="workDetail.id"
       [typoImage]="workDetail.typoImage"
       [designHero]="workDetail.designHero"
@@ -24,9 +24,9 @@
       [typographyBackgroundColor]="workDetail.typographyBackgroundColor"
       [backgroundColor]="workDetail.primaryBackgroundColor">
     </app-brand-design>
-    <img class="sz-card" *ngIf="workDetail.banner2" [src]="workDetail.banner2" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
+    <img class="sz-card scroll-section" *ngIf="workDetail.banner2" [src]="workDetail.banner2" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
     <div *ngIf="workDetail.images.length > 0">
-      <div *ngFor="let r of rows" class="images-row">
+      <div *ngFor="let r of rows" class="images-row scroll-section">
         <div *ngFor="let c of r"
              class="sz-card image-card"
              [style.background-color]="workDetail.primaryBackgroundColor"

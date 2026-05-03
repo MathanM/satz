@@ -16,6 +16,10 @@ export class ButtonComponent {
   @Input({transform: booleanAttribute}) filled: boolean = false;
   @Output() onButtonClick = new EventEmitter();
 
+  get isTalkIcon(): boolean {
+    return this.iconRight?.startsWith('talk') ?? false;
+  }
+
   onClick() {
     this.onButtonClick.emit();
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {BrandCardComponent} from "../../components/brand-card/brand-card.component";
 import {BrandContentComponent} from "../../components/brand-content/brand-content.component";
@@ -19,11 +19,11 @@ import {NgForOf, NgIf, NgStyle} from '@angular/common';
   templateUrl: './work.component.html',
   styleUrl: './work.component.scss'
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent implements OnInit, AfterViewInit {
   workDetail: typeof workDetailInfo[string] | undefined;
   rows: any[][] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private el: ElementRef) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -31,6 +31,22 @@ export class WorkComponent implements OnInit {
       this.workDetail = workDetailInfo[id];
       this.rows = this.chunk(this.workDetail.images, 2);
     });
+  }
+
+  ngAfterViewInit() {
+    const sections = this.el.nativeElement.querySelectorAll('.scroll-section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('in-view'), i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
+    );
+    sections.forEach((s: Element) => observer.observe(s));
   }
 
   chunk(list: any[], size: number): any[][] {

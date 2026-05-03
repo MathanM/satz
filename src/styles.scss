@@ -87,6 +87,16 @@ p, h4, h2, h3, h1 {
   margin: 112px auto 0;
 }
 
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 .sz-card {
   border-radius: var(--card-border-radius);
   border: 1px solid var(--card-border);
