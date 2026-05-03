@@ -33,6 +33,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/satz/browser/
-          server-dir: ./files/public_html/
-          dangerous-clean-slate: true
-          log-level: verbose
+          server-dir: /public_html/
