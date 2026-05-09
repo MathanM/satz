@@ -30,6 +30,9 @@ footer {
       margin-bottom: 20px;
     }
   }
+  @media (max-width: 680px) {
+    margin-bottom: 24px;
+  }
 }
 
 .footer-card {
@@ -224,12 +227,25 @@ footer {
   justify-content: space-between;
   align-items: center;
 
+  p {
+    white-space: nowrap;
+  }
+
   nav {
     a {
       font-size: 1rem;
       text-decoration: none;
       color: var(--text-color);
       padding: 10px 23px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    nav {
+      a {
+        font-size: 0.9rem;
+        padding: 2px 8px;
+      }
     }
   }
 }
