@@ -58,19 +58,30 @@
   padding: 70px 35px;
   flex-grow: 1;
   animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  p {
+    animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+  app-button {
+    animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+    display: block;
+  }
   h2 {
+    animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
     font-size: 5rem;
     font-weight: 900;
     margin-top: 15px;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
     line-height: 1;
     letter-spacing: -0.5px;
     span {
       color: var(--primary-color);
     }
   }
+  @media (max-width: 680px) {
+    padding: 35px 35px;
+  }
   @media (max-width: 500px) {
-    padding: 40px 30px;
+    padding: 28px 30px;
     border-radius: 26px;
     h2 {
       font-size: 3.5rem;
@@ -102,17 +113,17 @@
     left: auto;
     right: 45px;
   }
-  swiper-container {
+  .marquee-wrap {
+    overflow: hidden;
     width: 100%;
+    cursor: grab;
+    &:active { cursor: grabbing; }
   }
-  swiper-slide {
-    max-width: fit-content;
-  }
-  app-badge {
-    margin-right: 20px;
-    &:last-child {
-      margin-right: 0;
-    }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: marqueeScroll 14s linear infinite;
   }
   @media (max-width: 500px) {
     padding: 20px;

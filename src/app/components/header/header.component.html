@@ -6,23 +6,23 @@
   <div class="nav-container">
     <nav>
       <a routerLink="/home">Work</a>
-      <a routerLink="/about">About</a>
       <a routerLink="/shop">Shop</a>
+      <a routerLink="/about">About</a>
     </nav>
   </div>
   <div class="right-container">
     <app-button label="Let’s talk" iconRight="talk" hover-invert (onButtonClick)="onMail()"></app-button>
-    <div class="ham-menu" (click)="onToggleMenu()">
+    <div class="ham-menu" [class.open]="showMenu" (click)="onToggleMenu()">
       <div class="ham-line"></div>
       <div class="ham-line"></div>
       <div class="ham-line"></div>
     </div>
   </div>
 </header>
-<nav class="nav-card" *ngIf="showMenu">
+<nav class="nav-card" [class.open]="showMenu">
   <a routerLink="/home">Work</a>
-  <a routerLink="/about">About</a>
   <a routerLink="/shop">Shop</a>
+  <a routerLink="/about">About</a>
   <app-button class="talk-button" label="Let’s talk" iconRight="talk" hover-invert full-width (onButtonClick)="onMail()"></app-button>
 </nav>
 

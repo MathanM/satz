@@ -7,6 +7,7 @@
   transform: translateX(-50%);
   top: 0;
   z-index: 20;
+  animation: fadeSlideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 header {
@@ -22,7 +23,7 @@ header {
   .ham-menu {
     width: 40px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     background: var(--card-background);
     border: 1.2px solid var(--card-border);
     align-items: center;
@@ -31,16 +32,27 @@ header {
     padding: 8px;
     margin-left: 8px;
     display: none;
+    cursor: pointer;
     @media (max-width: 680px) {
       display: flex;
     }
     .ham-line {
       width: 100%;
-      border: 1.2px solid var(--card-border);
+      height: 2px;
+      background: var(--card-border);
+      border-radius: 2px;
       margin-bottom: 5px;
+      transform-origin: center;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  opacity 0.25s ease;
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    &.open {
+      .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+      .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
   }
   nav {
@@ -103,6 +115,21 @@ header {
   background: var(--card-background);
   padding: 0 20px;
   margin-top: 12px;
+  opacity: 0;
+  transform: translateY(-8px) scaleY(0.96);
+  transform-origin: top center;
+  visibility: hidden;
+  transition: opacity 0.25s ease,
+              transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0s 0.3s;
+  &.open {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    visibility: visible;
+    transition: opacity 0.25s ease,
+                transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 0s 0s;
+  }
   a {
     padding: 15px 5px;
     font-size: 1.15rem;
