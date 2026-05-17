@@ -30,6 +30,9 @@
   RewriteEngine On
   RewriteBase /
 
+  # Redirect bare root to /home so crawlers land on pre-rendered content
+  RewriteRule ^$ /home [R=301,L]
+
   # Always serve Angular for routes
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ index.html [L]
