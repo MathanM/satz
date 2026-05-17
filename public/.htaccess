@@ -33,7 +33,9 @@
   # Redirect bare root to /home so crawlers land on pre-rendered content
   RewriteRule ^$ /home [R=301,L]
 
-  # Always serve Angular for routes
+  # Serve pre-rendered HTML for directories (e.g. /home → home/index.html)
+  # Fall back to index.html only for routes with no pre-rendered file or directory
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>

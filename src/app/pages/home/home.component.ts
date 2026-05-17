@@ -34,21 +34,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
-
-    const cards = this.el.nativeElement.querySelectorAll('app-work-card');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('in-view'), i * 80);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    cards.forEach((card: Element) => observer.observe(card));
-
     this.setupMarqueeDrag();
   }
 
