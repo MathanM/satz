@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'outfit';
-  src: url('/fonts/Outfit/Outfit-VariableFont_wght.ttf') format("truetype");
+  src: url('/fonts/Outfit/Outfit-VariableFont_wght.woff2') format("woff2"),
+       url('/fonts/Outfit/Outfit-VariableFont_wght.ttf') format("truetype");
   font-display: swap;
 }
 

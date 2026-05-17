@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, EventEmitter, Input, Output} from '@angular/core';
+import {ChangeDetectionStrategy, AfterViewInit, Component, ElementRef, EventEmitter, Input, Output} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -7,7 +7,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   templateUrl: './toggle.component.html',
-  styleUrl: './toggle.component.scss'
+  styleUrl: './toggle.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToggleComponent implements AfterViewInit {
   @Input({required: true}) selected!: boolean;

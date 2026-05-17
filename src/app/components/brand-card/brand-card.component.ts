@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {BreadcrumbsComponent} from '../breadcrumbs/breadcrumbs.component';
 
@@ -8,7 +8,8 @@ import {BreadcrumbsComponent} from '../breadcrumbs/breadcrumbs.component';
     BreadcrumbsComponent
   ],
   templateUrl: './brand-card.component.html',
-  styleUrl: './brand-card.component.scss'
+  styleUrl: './brand-card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BrandCardComponent {
   @Input() title: string = '';

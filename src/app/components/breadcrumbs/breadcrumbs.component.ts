@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from '@angular/router';
 import {AppService} from '../../services/app.service';
@@ -11,7 +11,8 @@ import {AppService} from '../../services/app.service';
     RouterLink
   ],
   templateUrl: './breadcrumbs.component.html',
-  styleUrl: './breadcrumbs.component.scss'
+  styleUrl: './breadcrumbs.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BreadcrumbsComponent {
   @Input({required: true}) links!: {label:string, path: string}[];

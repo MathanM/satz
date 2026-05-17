@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component } from '@angular/core';
 import {ButtonComponent} from "../button/button.component";
 
 @Component({
@@ -7,7 +7,8 @@ import {ButtonComponent} from "../button/button.component";
         ButtonComponent
     ],
   templateUrl: './shop-item.component.html',
-  styleUrl: './shop-item.component.scss'
+  styleUrl: './shop-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShopItemComponent {
 

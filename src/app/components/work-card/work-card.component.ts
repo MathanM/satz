@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {BadgeComponent} from '../badge/badge.component';
 import {ButtonComponent} from '../button/button.component';
 import {NgForOf, NgIf} from '@angular/common';
@@ -13,7 +13,8 @@ import {Router} from '@angular/router';
     NgIf
   ],
   templateUrl: './work-card.component.html',
-  styleUrl: './work-card.component.scss'
+  styleUrl: './work-card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkCardComponent {
   @Input({required: true}) title!: string;

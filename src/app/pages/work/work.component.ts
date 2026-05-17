@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import {ChangeDetectionStrategy, AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
@@ -19,7 +19,8 @@ import {NgForOf, NgIf, NgStyle} from '@angular/common';
         NgStyle
     ],
   templateUrl: './work.component.html',
-  styleUrl: './work.component.scss'
+  styleUrl: './work.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent implements OnInit, AfterViewInit {
   workDetail: typeof workDetailInfo[string] | undefined;

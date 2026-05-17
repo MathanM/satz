@@ -1,3 +1,31 @@
+# ── Compression ─────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+</IfModule>
+
+# ── Cache headers ────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Hashed JS/CSS — cache forever (Angular adds hash to filenames)
+  <FilesMatch "\.(js|css)$">
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Images and fonts — cache for 6 months
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|gif|ico|woff|woff2|ttf)$">
+    ExpiresDefault "access plus 6 months"
+    Header set Cache-Control "public, max-age=15552000"
+  </FilesMatch>
+  # HTML — short cache so pre-rendered pages stay fresh
+  <FilesMatch "\.html$">
+    ExpiresDefault "access plus 1 hour"
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── Angular routing ──────────────────────────────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /

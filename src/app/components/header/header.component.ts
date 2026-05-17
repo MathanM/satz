@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Inject, Renderer2} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Inject, Renderer2} from '@angular/core';
 import {ButtonComponent} from '../button/button.component';
 import {ToggleComponent} from '../toggle/toggle.component';
 import {DOCUMENT} from '@angular/common';
@@ -13,7 +13,8 @@ import {RouterLink} from '@angular/router';
     RouterLink
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements AfterViewInit {
   showMenu = false;
@@ -24,7 +25,7 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   onTheme(flag: boolean) {
-    this.appService.isDarkTheme = flag;
+    this.appService.isDarkTheme.set(flag);
     if (flag) {
       this.renderer.addClass(this.document.body, 'dark');
     } else {

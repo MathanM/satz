@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {BadgeComponent} from "../badge/badge.component";
 import {NgForOf, NgIf} from "@angular/common";
 
@@ -10,7 +10,8 @@ import {NgForOf, NgIf} from "@angular/common";
         NgIf
     ],
   templateUrl: './brand-content.component.html',
-  styleUrl: './brand-content.component.scss'
+  styleUrl: './brand-content.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BrandContentComponent {
   @Input({required: true}) labels!: string[];

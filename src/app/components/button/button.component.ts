@@ -1,4 +1,4 @@
-import {booleanAttribute, Component, EventEmitter, Input, Output} from '@angular/core';
+import {ChangeDetectionStrategy, booleanAttribute, Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgIf} from '@angular/common';
 
 @Component({
@@ -8,6 +8,7 @@ import {NgIf} from '@angular/common';
   ],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   @Input({required: true}) label!: string;

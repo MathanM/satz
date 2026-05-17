@@ -1,11 +1,12 @@
-import {Component, HostBinding, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, Input} from '@angular/core';
 import {NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-brand-design',
   imports: [NgForOf, NgIf],
   templateUrl: './brand-design.component.html',
-  styleUrl: './brand-design.component.scss'
+  styleUrl: './brand-design.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BrandDesignComponent {
   @HostBinding('class') get hostClass() { return this.id; }

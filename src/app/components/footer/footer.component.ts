@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component } from '@angular/core';
 import {AppService} from '../../services/app.service';
 import {RouterLink} from '@angular/router';
 
@@ -6,7 +6,8 @@ import {RouterLink} from '@angular/router';
   selector: 'app-footer',
   imports: [RouterLink],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
   constructor(protected appService: AppService) {
