@@ -4,9 +4,9 @@
     <app-badge *ngFor="let l of labels" size="s" [label]="l"></app-badge>
   </div>
   <p>{{description}}</p>
-  <img *ngIf="badge" [src]="badge" alt="Badge" class="work-card-badge"/>
+  <img *ngIf="badge" [src]="badge" [alt]="badgeAlt || ''" class="work-card-badge"/>
   <app-button inverse="true" filled="true" full-width label="View full work" (onButtonClick)="onViewWork()"></app-button>
 </div>
 <div class="work-card-img">
-  <img [src]="image" [alt]="title" />
+  <img loading="lazy" [src]="image" [alt]="imageAlt || title" />
 </div>

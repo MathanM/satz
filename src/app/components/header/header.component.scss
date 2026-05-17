@@ -1,13 +1,13 @@
 :host {
   padding: 20px var(--page-inline-padding);
   position: fixed;
-  width: 100%;
-  max-width: var(--page-max-width);
-  left: 50%;
-  transform: translateX(-50%);
   top: 0;
+  left: 50%;
+  right: 0;
   z-index: 20;
   animation: fadeSlideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform: translateX(-50%);
+  min-width: min(var(--page-max-width), 100%);
 }
 
 header {
@@ -114,7 +114,7 @@ header {
   border-radius: 20px;
   background: var(--card-background);
   padding: 0 20px;
-  margin-top: 12px;
+  margin-top: 18px;
   opacity: 0;
   transform: translateY(-8px) scaleY(0.96);
   transform-origin: top center;
@@ -126,6 +126,7 @@ header {
     opacity: 1;
     transform: translateY(0) scaleY(1);
     visibility: visible;
+    padding-top: 6px;
     transition: opacity 0.25s ease,
                 transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                 visibility 0s 0s;

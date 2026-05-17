@@ -97,7 +97,7 @@ footer {
   }
   @media (max-width: 500px) {
     padding: 30px;
-    border-radius: 26px;
+    border-radius: var(--card-border-radius);
     p {
       font-size: 1rem;
     }
@@ -127,7 +127,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 18px;
     min-width: 150px;
     align-self: stretch;
     img {
@@ -139,7 +139,7 @@ footer {
     margin-right: 30px;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #fff;
     font-weight: 500;
   }
@@ -156,10 +156,10 @@ footer {
     }
   }
   @media (max-width: 500px) {
-    border-radius: 26px;
+    border-radius: var(--card-border-radius);
     .icon-container {
       min-width: 90px;
-      border-radius: 26px;
+      border-radius: 18px;
     }
   }
 }
@@ -226,6 +226,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
 
   p {
     white-space: nowrap;

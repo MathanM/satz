@@ -1,11 +1,11 @@
 <div [id]="id" class="sz-card design-hero" [style.background-color]="backgroundColor">
-  <img [src]="designHero" alt="Design hero" />
+  <img loading="lazy" [src]="designHero" [alt]="designHeroAlt" />
 </div>
 <div class="design-specs">
   <div class="sz-card spec-panel" [style.background-color]="typographyBackgroundColor ?? backgroundColor">
     <h4>Typography</h4>
     <p *ngIf="typographyFont" class="typography-font">{{typographyFont}}</p>
-    <img *ngIf="typoImage" [src]="typoImage" alt="Typography image" class="typography-image"/>
+    <img *ngIf="typoImage" loading="lazy" [src]="typoImage" [alt]="typoImageAlt || ''" class="typography-image"/>
   </div>
   <div class="sz-card spec-panel colors-panel" [style.background-color]="colorBackgroundColor ?? backgroundColor">
     <h4>Color</h4>
@@ -13,7 +13,8 @@
       <div
         *ngFor="let color of colorSwatch"
         class="color-swatch"
-        [style.background-color]="color">
+        [style.background-color]="color"
+        [style.color]="getTextColor(color)">
         {{color}}
       </div>
     </div>

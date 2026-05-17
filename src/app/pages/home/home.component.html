@@ -2,27 +2,36 @@
   <section class="home-banner">
     <div class="home-content">
       <div class="home-card">
-        <p>Visual designer whos solves</p>
-        <h2><span>Branding</span><br>Solutions for Your Business</h2>
+        <p>You've built the business. Now the brand.</p>
+        <h2><span>Brand Identity.</span><br>Your Business Deserves.</h2>
         <app-button inverse="true" filled="true" label="Let’s talk" [iconRight]="appService.isDarkTheme ? 'talk' : 'talk-dark'"></app-button>
       </div>
       <div class="batch-card">
-        <swiper-container slides-per-view="auto" space-between="20" free-mode="true" loop="true" speed="300" autoplay="true">
-          <swiper-slide><app-badge label="UI/UX"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Branding"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Logo"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Illustration"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Typography"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Design system"></app-badge></swiper-slide>
-          <swiper-slide><app-badge label="Branding kit"></app-badge></swiper-slide>
-        </swiper-container>
+        <div class="marquee-wrap">
+          <div class="marquee-track">
+            <app-badge label="UI/UX"></app-badge>
+            <app-badge label="Branding"></app-badge>
+            <app-badge label="Logo"></app-badge>
+            <app-badge label="Illustration"></app-badge>
+            <app-badge label="Typography"></app-badge>
+            <app-badge label="Design system"></app-badge>
+            <app-badge label="Branding kit"></app-badge>
+            <app-badge label="UI/UX"></app-badge>
+            <app-badge label="Branding"></app-badge>
+            <app-badge label="Logo"></app-badge>
+            <app-badge label="Illustration"></app-badge>
+            <app-badge label="Typography"></app-badge>
+            <app-badge label="Design system"></app-badge>
+            <app-badge label="Branding kit"></app-badge>
+          </div>
+        </div>
       </div>
     </div>
     <div class="home-banner-img">
-      <img src="banner.png"  alt="Satheesh M" />
+      <img src="banner.webp" alt="Satheesh — brand identity designer based in Tamil Nadu India working with startups worldwide" fetchpriority="high" />
     </div>
   </section>
   <section class="work-cards">
-    <app-work-card *ngFor="let work of homeWorkInfo" [title]="work.title" [description]="work.description" [labels]="work.labels" [image]="work.image" [id]="work.id" [badge]="work.badge"></app-work-card>
+    <app-work-card *ngFor="let work of homeWorkInfo" [title]="work.title" [description]="work.description" [labels]="work.labels" [image]="work.image" [imageAlt]="work.imageAlt" [id]="work.id" [badge]="work.badge" [badgeAlt]="work.badgeAlt"></app-work-card>
   </section>
 </div>

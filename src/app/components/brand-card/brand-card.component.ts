@@ -14,6 +14,7 @@ export class BrandCardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() logo: string = '';
+  @Input() logoAlt: string = '';
   @Input() primaryBackgroundColor: string = '';
   @Input() links: { label: string, path: string }[] = [];
 

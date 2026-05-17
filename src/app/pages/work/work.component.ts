@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import {BrandCardComponent} from "../../components/brand-card/brand-card.component";
 import {BrandContentComponent} from "../../components/brand-content/brand-content.component";
 import {BrandDesignComponent} from "../../components/brand-design/brand-design.component";
@@ -23,13 +24,19 @@ export class WorkComponent implements OnInit, AfterViewInit {
   workDetail: typeof workDetailInfo[string] | undefined;
   rows: any[][] = [];
 
-  constructor(private route: ActivatedRoute, private el: ElementRef) {}
+  constructor(private route: ActivatedRoute, private router: Router, private el: ElementRef, private titleService: Title, private metaService: Meta) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id'];
       this.workDetail = workDetailInfo[id];
+      if (!this.workDetail) {
+        this.router.navigate(['/home']);
+        return;
+      }
       this.rows = this.chunk(this.workDetail.images, 2);
+      this.titleService.setTitle(this.workDetail.metaTitle);
+      this.metaService.updateTag({ name: 'description', content: this.workDetail.metaDescription });
     });
   }
 
@@ -55,5 +62,14 @@ export class WorkComponent implements OnInit, AfterViewInit {
       result.push(list.slice(i, i + size));
     }
     return result;
+  }
+
+  getTileStyles(styles: Record<string, string> = {}): Record<string, string> {
+    const { 'background-size': bgSize, height, ...rest } = styles;
+    return {
+      ...rest,
+      '--tile-bg-size': bgSize ?? 'cover',
+      '--tile-height': height ?? '450px',
+    };
   }
 }

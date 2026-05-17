@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Inject, Renderer2} from '@angular/core';
 import {ButtonComponent} from '../button/button.component';
 import {ToggleComponent} from '../toggle/toggle.component';
-import {DOCUMENT, NgIf} from '@angular/common';
+import {DOCUMENT} from '@angular/common';
 import {AppService} from '../../services/app.service';
 import {RouterLink} from '@angular/router';
 
@@ -10,7 +10,6 @@ import {RouterLink} from '@angular/router';
   imports: [
     ButtonComponent,
     ToggleComponent,
-    NgIf,
     RouterLink
   ],
   templateUrl: './header.component.html',

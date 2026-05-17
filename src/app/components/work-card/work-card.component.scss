@@ -41,6 +41,10 @@
   .work-card-badge {
     margin-bottom: 20px;
     height: 70px;
+    align-self: center;
+    @media (max-width: 560px) {
+      margin-left: 0;
+    }
   }
   p {
     margin-top: 20px;

@@ -4,6 +4,13 @@
   padding: 20px var(--page-inline-padding);
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 60px;
+  @media (max-width: 680px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+  }
 }
 
 .scroll-section {
@@ -22,7 +29,31 @@
   margin-bottom: 20px;
 
   .image-card {
-    height: 450px;
+    height: var(--tile-height, 450px);
+    background-size: var(--tile-bg-size, cover);
     width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .image-card {
+      height: 360px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    gap: 12px;
+    margin-bottom: 12px;
+    .image-card {
+      height: 340px;
+      background-size: cover;
+    }
+    .image-card.contain-mobile {
+      background-size: contain;
+    }
+  }
+  @media (max-width: 500px) {
+    .image-card {
+      height: 260px;
+    }
   }
 }

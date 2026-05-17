@@ -3,29 +3,34 @@ export const homeWorkInfo = [
     title: "Ezhumin",
     description: "Designed as a brand identity proposal for a Tamil Nadu government EV initiative. The project was awarded 1st Runner-Up in the official branding competition.",
     labels: ['Branding', 'Logo'],
-    image: "your-majesty.png",
+    image: "ezhumin.webp",
+    imageAlt: "Ezhumin EV brand identity design — award-winning Tamil Nadu government project by Satzartz",
     id: "ezhumin",
-    badge: "ezhumin/badge.svg"
+    badge: "ezhumin/badge.svg",
+    badgeAlt: "Ezhumin 1st Runner-Up badge — Tamil Nadu Government EV Branding Competition award"
   },
   {
     title: "Boo-sync",
-    description: "I created a playful yet modern brand identity for Boo-Sync, the dog translator that turns barks into stories. From a friendly logo to vibrant colors, it's all about connecting pups and people in style!",
+    description: "A playful yet modern brand identity for Boo-Sync — the smart dog translator that turns barks into stories. Logo design, colour system, and visual identity.",
     labels: ['Branding', 'Logo'],
-    image: "boosync.png",
+    image: "boosync.webp",
+    imageAlt: "Boo-Sync pet tech brand identity design — logo and colour system by Satzartz India",
     id: "boosync"
   },
   {
     title: "Your Majesty",
-    description: "Developed a bold, elegant brand identity with a crown-inspired logo for Your Majesty fashion brand and a refined color palette, reflecting sophistication and luxury.",
+    description: "A bold, crown-inspired luxury brand identity for Your Majesty — built around elegance, authority, and fashion-forward confidence.",
     labels: ['Branding', 'Logo'],
-    image: "your-majesty.png",
+    image: "your-majesty.webp",
+    imageAlt: "Your Majesty fashion brand identity design — crown logo and luxury branding by Satzartz India",
     id: "majesty"
   },
   {
     title: "Power House GYM",
-    description: "Created a bold brand identity with a dynamic logo for Power House GYM with vibrant colors, and motivational designs to inspire strength and energy.",
+    description: "A dynamic fitness brand identity for Power House Gym — bold logo design, vibrant colour palette, and gym branding built to inspire strength and action.",
     labels: ['Branding', 'Logo'],
-    image: "gym-bento.png",
+    image: "gym-bento.webp",
+    imageAlt: "Power House Gym fitness brand identity design — logo and visual system by Satzartz India",
     id: "gym"
   }
 ];

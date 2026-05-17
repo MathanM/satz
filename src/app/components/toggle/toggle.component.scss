@@ -41,4 +41,21 @@
       transform: translateY(-50%) translateX(-5px);
     }
   }
+
+  @media (max-width: 680px) {
+    height: 12px;
+    width: 24px;
+    border-radius: 6px;
+    input:checked + .slider::after {
+      transform: translateY(-50%) translateX(8px);
+    }
+    .slider {
+      border-radius: 6px;
+      &::after {
+        height: 15px;
+        width: 15px;
+        transform: translateY(-50%) translateX(-3px);
+      }
+    }
+  }
 }

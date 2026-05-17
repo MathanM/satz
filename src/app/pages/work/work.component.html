@@ -4,10 +4,11 @@
       [title]="workDetail.titleHtml"
       [description]="workDetail.description"
       [logo]="workDetail.logo"
+      [logoAlt]="workDetail.logoAlt"
       [primaryBackgroundColor]="workDetail.primaryBackgroundColor"
       [links]="workDetail.links">
     </app-brand-card>
-    <img class="sz-card scroll-section" [src]="workDetail.banner1" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
+    <img class="sz-card scroll-section" loading="lazy" [src]="workDetail.banner1" [alt]="workDetail.banner1Alt" [style.background-color]="workDetail.primaryBackgroundColor"/>
     <app-brand-content class="scroll-section"
       [labels]="workDetail.labels"
       [industry]="workDetail.industry"
@@ -17,21 +18,25 @@
     <app-brand-design class="scroll-section"
       [id]="workDetail.id"
       [typoImage]="workDetail.typoImage"
+      [typoImageAlt]="workDetail.typoImageAlt"
       [designHero]="workDetail.designHero"
+      [designHeroAlt]="workDetail.designHeroAlt"
       [typographyFont]="workDetail.typographyFont"
       [colorSwatch]="workDetail.colorSwatch"
       [colorBackgroundColor]="workDetail.colorBackgroundColor"
       [typographyBackgroundColor]="workDetail.typographyBackgroundColor"
       [backgroundColor]="workDetail.primaryBackgroundColor">
     </app-brand-design>
-    <img class="sz-card scroll-section" *ngIf="workDetail.banner2" [src]="workDetail.banner2" [alt]="workDetail.title" [style.background-color]="workDetail.primaryBackgroundColor"/>
+    <img class="sz-card scroll-section" *ngIf="workDetail.banner2" loading="lazy" [src]="workDetail.banner2" [alt]="workDetail.banner2Alt" [style.background-color]="workDetail.primaryBackgroundColor"/>
     <div *ngIf="workDetail.images.length > 0">
       <div *ngFor="let r of rows" class="images-row scroll-section">
         <div *ngFor="let c of r"
              class="sz-card image-card"
+             [class.contain-mobile]="c.cssClass === 'contain-mobile'"
              [style.background-color]="workDetail.primaryBackgroundColor"
-             [ngStyle]="c.styles"
-        ></div>
+             [ngStyle]="getTileStyles(c.styles)">
+          <span *ngIf="c.alt" class="sr-only">{{c.alt}}</span>
+        </div>
       </div>
     </div>
   </section>

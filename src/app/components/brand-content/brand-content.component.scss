@@ -1,23 +1,42 @@
 :host {
   display: flex;
   width: 100%;
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .brand-content {
-  border-radius: 30px;
+  border-radius: var(--card-border-radius);
   border: 1px solid var(--card-border);
   background: var(--card-background);
   padding: 40px;
   margin-right: 20px;
   flex-grow: 1;
+  @media (max-width: 1024px) {
+    padding: 30px;
+  }
+  @media (max-width: 680px) {
+    margin-right: 0;
+    padding: 25px;
+  }
 }
 
 .brand-content-description {
   border: 1px solid var(--card-border);
-  border-radius: 30px;
+  border-radius: var(--card-border-radius);
   background: var(--card-background);
   padding: 40px;
   width: 65%;
+  @media (max-width: 1024px) {
+    padding: 30px;
+    width: 55%;
+  }
+  @media (max-width: 680px) {
+    width: 100%;
+    padding: 25px;
+  }
 }
 h4 {
   font-size: 2.125rem;
