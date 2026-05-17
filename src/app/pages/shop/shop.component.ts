@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component } from '@angular/core';
+import {Component } from '@angular/core';
 import {Title, Meta} from '@angular/platform-browser';
 import {ShopItemComponent} from '../../components/shop-item/shop-item.component';
 
@@ -9,7 +9,6 @@ import {ShopItemComponent} from '../../components/shop-item/shop-item.component'
   ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShopComponent {
   constructor(private titleService: Title, private metaService: Meta) {

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, AfterViewInit, Component, ElementRef, Inject, OnDestroy, PLATFORM_ID} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Inject, OnDestroy, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
 import {Title, Meta} from '@angular/platform-browser';
 import {ButtonComponent} from '../../components/button/button.component';
@@ -20,7 +20,6 @@ const MARQUEE_DURATION = 14;
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   homeWorkInfo = homeWorkInfo;
