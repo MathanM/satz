@@ -1,4 +1,6 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Inject, OnDestroy, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
+import {Title, Meta} from '@angular/platform-browser';
 import {ButtonComponent} from '../../components/button/button.component';
 import {BadgeComponent} from '../../components/badge/badge.component';
 import {WorkCardComponent} from '../../components/work-card/work-card.component';
@@ -18,7 +20,6 @@ const MARQUEE_DURATION = 14;
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   homeWorkInfo = homeWorkInfo;
@@ -26,9 +27,14 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private onMouseMove!: (e: MouseEvent) => void;
   private onMouseUp!: () => void;
 
-  constructor(protected appService: AppService, private el: ElementRef) {}
+  constructor(protected appService: AppService, private el: ElementRef, private titleService: Title, private metaService: Meta, @Inject(PLATFORM_ID) private platformId: object) {
+    this.titleService.setTitle('Satzartz — Brand Identity Designer');
+    this.metaService.updateTag({ name: 'description', content: 'Satzartz — bold brand identities for startups and businesses worldwide. Logo design, UI/UX, and branding by Satheesh M, based in Tamil Nadu, India.' });
+  }
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const cards = this.el.nativeElement.querySelectorAll('app-work-card');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -94,6 +100,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    if (!isPlatformBrowser(this.platformId)) return;
     document.removeEventListener('mousemove', this.onMouseMove);
     document.removeEventListener('mouseup', this.onMouseUp);
   }

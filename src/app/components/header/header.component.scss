@@ -6,7 +6,6 @@
   right: 0;
   z-index: 20;
   animation: fadeSlideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-  transform: translateX(-50%);
   min-width: min(var(--page-max-width), 100%);
 }
 

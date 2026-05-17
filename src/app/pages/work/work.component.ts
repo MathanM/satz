@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 import {BrandCardComponent} from "../../components/brand-card/brand-card.component";
 import {BrandContentComponent} from "../../components/brand-content/brand-content.component";
 import {BrandDesignComponent} from "../../components/brand-design/brand-design.component";
@@ -24,7 +25,7 @@ export class WorkComponent implements OnInit, AfterViewInit {
   workDetail: typeof workDetailInfo[string] | undefined;
   rows: any[][] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router, private el: ElementRef, private titleService: Title, private metaService: Meta) {}
+  constructor(private route: ActivatedRoute, private router: Router, private el: ElementRef, private titleService: Title, private metaService: Meta, @Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -41,6 +42,7 @@ export class WorkComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const sections = this.el.nativeElement.querySelectorAll('.scroll-section');
     const observer = new IntersectionObserver(
       (entries) => {

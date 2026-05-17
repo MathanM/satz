@@ -1,0 +1,4 @@
+/work/ezhumin
+/work/boosync
+/work/gym
+/work/majesty
