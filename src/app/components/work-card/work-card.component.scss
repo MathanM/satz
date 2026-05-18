@@ -1,7 +1,7 @@
 :host {
   display: flex;
   width: 100%;
-  animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 
   .work-card {
     flex-shrink: 1;
@@ -25,7 +25,7 @@
   margin-right: 20px;
   display: flex;
   flex-direction: column;
-  h3 {
+  h2 {
     font-size: 1.375rem;
     font-weight: 400;
     margin-bottom: 18px;
@@ -49,7 +49,7 @@
   @media (max-width: 500px) {
     padding: 20px;
     border-radius: 26px;
-    h3 {
+    h2 {
       margin-bottom: 10px;
     }
   }

@@ -3,7 +3,7 @@
     <div class="home-content">
       <div class="home-card">
         <p>You've built the business. Now the brand.</p>
-        <h2><span>Brand Identity.</span><br>Your Business Deserves.</h2>
+        <h1><span>Brand Identity.</span><br>Your Business Deserves.</h1>
         <app-button inverse="true" filled="true" label="Let’s talk" [iconRight]="appService.isDarkTheme() ? 'talk' : 'talk-dark'"></app-button>
       </div>
       <div class="batch-card">
@@ -32,6 +32,6 @@
     </div>
   </section>
   <section class="work-cards">
-    <app-work-card *ngFor="let work of homeWorkInfo" [title]="work.title" [description]="work.description" [labels]="work.labels" [image]="work.image" [imageAlt]="work.imageAlt" [id]="work.id" [badge]="work.badge" [badgeAlt]="work.badgeAlt"></app-work-card>
+<app-work-card *ngFor="let work of homeWorkInfo" [title]="work.title" [description]="work.description" [labels]="work.labels" [image]="work.image" [imageAlt]="work.imageAlt" [id]="work.id" [badge]="work.badge" [badgeAlt]="work.badgeAlt"></app-work-card>
   </section>
 </div>

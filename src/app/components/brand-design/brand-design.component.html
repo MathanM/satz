@@ -3,12 +3,12 @@
 </div>
 <div class="design-specs">
   <div class="sz-card spec-panel" [style.background-color]="typographyBackgroundColor ?? backgroundColor">
-    <h4>Typography</h4>
+    <h2>Typography</h2>
     <p *ngIf="typographyFont" class="typography-font">{{typographyFont}}</p>
     <img *ngIf="typoImage" loading="lazy" [src]="typoImage" [alt]="typoImageAlt || ''" class="typography-image"/>
   </div>
   <div class="sz-card spec-panel colors-panel" [style.background-color]="colorBackgroundColor ?? backgroundColor">
-    <h4>Color</h4>
+    <h2>Color</h2>
     <div class="color-swatches">
       <div
         *ngFor="let color of colorSwatch"

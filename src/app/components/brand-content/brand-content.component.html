@@ -1,22 +1,22 @@
 <div class="brand-content">
   <div *ngIf="industry">
-    <h4>Industry</h4>
+    <h2>Industry</h2>
     <p>{{industry}}</p>
     <br/>
   </div>
-  <h4>My role</h4>
+  <h2>My role</h2>
   <div class="badge-group">
     <app-badge *ngFor="let l of labels" size="s" [label]="l"></app-badge>
   </div>
 </div>
 <div class="brand-content-description" *ngIf="goals || results.length > 0">
   <div *ngIf="goals">
-    <h4>Goals</h4>
+    <h2>Goals</h2>
     <p>{{goals}}</p>
     <br/>
   </div>
   <div *ngIf="results.length > 0">
-    <h4>Results</h4>
+    <h2>Results</h2>
     <p *ngFor="let result of results">{{result}}</p>
   </div>
 </div>

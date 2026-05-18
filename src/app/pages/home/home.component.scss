@@ -65,7 +65,7 @@
     animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
     display: block;
   }
-  h2 {
+  h1 {
     animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
     font-size: 5rem;
     font-weight: 900;
@@ -83,7 +83,7 @@
   @media (max-width: 500px) {
     padding: 28px 30px;
     border-radius: 26px;
-    h2 {
+    h1 {
       font-size: 3.5rem;
     }
   }

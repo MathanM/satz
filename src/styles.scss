@@ -99,6 +99,11 @@ p, h4, h2, h3, h1 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slideUp {
+  from { transform: translateY(32px); }
+  to   { transform: translateY(0); }
+}
+
 @keyframes fadeSlideDown {
   from { opacity: 0; transform: translateX(-50%) translateY(-100%); }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
