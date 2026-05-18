@@ -12,7 +12,7 @@ import {ShopItemComponent} from '../../components/shop-item/shop-item.component'
 })
 export class ShopComponent {
   constructor(private titleService: Title, private metaService: Meta) {
-    this.titleService.setTitle('Shop — Satzartz Design Resources');
-    this.metaService.updateTag({ name: 'description', content: 'Design resources and brand kits by Satzartz. Printable sticker packs and creative assets for designers, available to download.' });
+    this.titleService.setTitle('Design Resources for Brand Designers · Satzartz Shop');
+    this.metaService.updateTag({ name: 'description', content: 'Premium design resources, brand kits, and tools for designers — curated by Satzartz, brand identity designer based in Tamil Nadu, India.' });
   }
 }

@@ -13,7 +13,7 @@ import {AppService} from '../../services/app.service';
 })
 export class AboutComponent {
   constructor(protected appService: AppService, private titleService: Title, private metaService: Meta) {
-    this.titleService.setTitle('About — Satzartz');
-    this.metaService.updateTag({ name: 'description', content: 'Meet Satheesh M — graphic and visual designer with 8+ years of experience in brand identity, logo design, and UI/UX. Based in Tamil Nadu, India, working with startups worldwide.' });
+    this.titleService.setTitle('About Satheesh · Brand Identity Designer Tamil Nadu India · Satzartz');
+    this.metaService.updateTag({ name: 'description', content: 'Meet Satheesh — the brand identity designer behind Satzartz. Based in Tamil Nadu, India, with 8+ years of experience designing bold logos, visual systems, and brand identities for clients worldwide.' });
   }
 }

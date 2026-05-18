@@ -1,0 +1,17 @@
+<div class="page-container">
+  <section class="not-found-section">
+    <div class="not-found-card">
+      <div class="not-found-content">
+        <span class="error-label">Error 404</span>
+        <h1>Lost in the <span>whitespace.</span></h1>
+        <p>This page doesn't exist — or maybe it got redesigned out of existence. Either way, let's get you back on brand.</p>
+        <app-button inverse="true" filled="true" label="Back to home" [iconRight]="appService.isDarkTheme() ? 'talk' : 'talk-dark'" (onButtonClick)="goHome()"></app-button>
+      </div>
+      <div class="not-found-display">
+        <span class="four">4</span>
+        <span class="zero">0</span>
+        <span class="four">4</span>
+      </div>
+    </div>
+  </section>
+</div>

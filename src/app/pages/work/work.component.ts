@@ -32,7 +32,7 @@ export class WorkComponent implements OnInit, AfterViewInit {
       const id = params['id'];
       this.workDetail = workDetailInfo[id];
       if (!this.workDetail) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         return;
       }
       this.rows = this.chunk(this.workDetail.images, 2);

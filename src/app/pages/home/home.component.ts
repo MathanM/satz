@@ -28,8 +28,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private onMouseUp!: () => void;
 
   constructor(protected appService: AppService, private el: ElementRef, private titleService: Title, private metaService: Meta, @Inject(PLATFORM_ID) private platformId: object) {
-    this.titleService.setTitle('Satzartz — Brand Identity Designer');
-    this.metaService.updateTag({ name: 'description', content: 'Satzartz — bold brand identities for startups and businesses worldwide. Logo design, UI/UX, and branding by Satheesh M, based in Tamil Nadu, India.' });
+    this.titleService.setTitle('Brand Identity Designer India · Satzartz — Tamil Nadu');
+    this.metaService.updateTag({ name: 'description', content: 'Satzartz — Brand identity designer based in Tamil Nadu, India. 8+ years crafting bold logos, visual identities, and brand guidelines for startups and businesses worldwide.' });
   }
 
   ngAfterViewInit() {

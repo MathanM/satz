@@ -25,13 +25,13 @@
   </FilesMatch>
 </IfModule>
 
+# ── Custom error pages ───────────────────────────────────────────────────────
+ErrorDocument 404 /index.html
+
 # ── Angular routing ──────────────────────────────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
-  # Redirect bare root to /home so crawlers land on pre-rendered content
-  RewriteRule ^$ /home [R=301,L]
 
   # Serve pre-rendered HTML for directories (e.g. /home → home/index.html)
   # Fall back to index.html only for routes with no pre-rendered file or directory
