@@ -1,0 +1,85 @@
+SATZARTZ — IMAGE ALT TEXT
+=========================
+Fill in the [ ] with your alt text for each image.
+
+
+GLOBAL
+------
+app-logo.svg                  → [ ]
+app-logo-dark.svg             → [ ]
+banner.png                    → [ ]
+favicon.svg                   → [ ]
+
+
+HOME THUMBNAILS
+---------------
+boosync.png                   → [ ]
+ezhumin.png                   → [ ]
+gym-bento.png                 → [ ]
+your-majesty.png              → [ ]
+
+
+ICONS
+-----
+icons/email.svg               → [ ]
+icons/globe.svg               → [ ]
+icons/insta.svg               → [ ]
+icons/twitter.svg             → [ ]
+icons/talk.svg                → [ ]
+icons/talk-dark.svg           → [ ]
+icons/breadcrumb.svg          → [ ]
+icons/breadcrumb-dark.svg     → [ ]
+
+
+POWER HOUSE GYM
+---------------
+gym/logo.svg                  → [ ]
+gym/banner-1.png              → [ ]
+gym/design-hero.png           → [ ]
+gym/tile-1.png                → [ ]
+gym/tile-2.png                → [ ]
+gym/tile-3.png                → [ ]
+gym/tile-4.png                → [ ]
+
+
+BOO-SYNC
+--------
+boosync/logo.svg              → [ ]
+boosync/banner-1.png          → [ ]
+boosync/banner-2.png          → [ ]
+boosync/design-hero.png       → [ ]
+boosync/tile-1.png            → [ ]
+boosync/tile-2.png            → [ ]
+boosync/tile-3.png            → [ ]
+boosync/tile-4.png            → [ ]
+
+
+EZHUMIN (எழுமின்)
+-----------------
+ezhumin/logo.svg              → [ ]
+ezhumin/badge.svg             → [ ]
+ezhumin/banner-1.png          → [ ]
+ezhumin/design-hero.png       → [ ]
+ezhumin/typo.png              → [ ]
+ezhumin/tile-1.png            → [ ]
+ezhumin/tile-2.png            → [ ]
+ezhumin/tile-3.png            → [ ]
+ezhumin/tile-4.png            → [ ]
+
+
+YOUR MAJESTY
+------------
+majesty/logo.svg              → [ ]
+majesty/banner-1.png          → [ ]
+majesty/banner-2.png          → [ ]
+majesty/design-hero.png       → [ ]
+majesty/tile-1.png            → [ ]
+majesty/tile-2.png            → [ ]
+majesty/tile-3.png            → [ ]
+majesty/tile-4.png            → [ ]
+
+
+SHOP
+----
+shop/img.png                  → [ ]
+s-logo.png                    → [ ]

@@ -30,6 +30,15 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   constructor(protected appService: AppService, private el: ElementRef, private titleService: Title, private metaService: Meta, @Inject(PLATFORM_ID) private platformId: object) {
     this.titleService.setTitle('Brand Identity Designer India · Satzartz — Tamil Nadu');
     this.metaService.updateTag({ name: 'description', content: 'Satzartz — Brand identity designer based in Tamil Nadu, India. 8+ years crafting bold logos, visual identities, and brand guidelines for startups and businesses worldwide.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Brand Identity Designer India · Satzartz — Tamil Nadu' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Satzartz — Brand identity designer based in Tamil Nadu, India. 8+ years crafting bold logos, visual identities, and brand guidelines for startups and businesses worldwide.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://satzartz.com' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://satzartz.com/banner.webp' });
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'Brand Identity Designer India · Satzartz — Tamil Nadu' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'Satzartz — Brand identity designer based in Tamil Nadu, India. 8+ years crafting bold logos, visual identities, and brand guidelines for startups and businesses worldwide.' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://satzartz.com/banner.webp' });
   }
 
   ngAfterViewInit() {

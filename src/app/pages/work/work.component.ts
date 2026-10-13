@@ -36,8 +36,18 @@ export class WorkComponent implements OnInit, AfterViewInit {
         return;
       }
       this.rows = this.chunk(this.workDetail.images, 2);
+      const ogImage = `https://satzartz.com/${this.workDetail.banner1}`;
       this.titleService.setTitle(this.workDetail.metaTitle);
       this.metaService.updateTag({ name: 'description', content: this.workDetail.metaDescription });
+      this.metaService.updateTag({ property: 'og:title', content: this.workDetail.metaTitle });
+      this.metaService.updateTag({ property: 'og:description', content: this.workDetail.metaDescription });
+      this.metaService.updateTag({ property: 'og:url', content: `https://satzartz.com/work/${this.workDetail.id}` });
+      this.metaService.updateTag({ property: 'og:image', content: ogImage });
+      this.metaService.updateTag({ property: 'og:type', content: 'website' });
+      this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+      this.metaService.updateTag({ name: 'twitter:title', content: this.workDetail.metaTitle });
+      this.metaService.updateTag({ name: 'twitter:description', content: this.workDetail.metaDescription });
+      this.metaService.updateTag({ name: 'twitter:image', content: ogImage });
     });
   }
 

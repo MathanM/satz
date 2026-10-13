@@ -3,6 +3,9 @@
   border: 1px solid var(--card-border);
   background: var(--card-background);
   padding: 20px;
+  @media (max-width: 500px) {
+    border-radius: 26px;
+  }
 }
 .shop-item-title {
   display: flex;
