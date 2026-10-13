@@ -19,6 +19,10 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<app-header></app-header>
+@if (!isBareLayout) {
+  <app-header></app-header>
+}
 <router-outlet />
-<app-footer></app-footer>
+@if (!isBareLayout) {
+  <app-footer></app-footer>
+}
